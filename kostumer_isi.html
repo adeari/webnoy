@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Data Kostumer</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="ddaccordionmenu/prototype.js"></script>
+<script language="JavaScript" type="text/javascript">
+function pilihnotadulu(str) {
+ var url="ambilkodekostumer.php";
+ new Ajax.Request(url, {   
+		method: 'post', 
+		onSuccess: function(transport) {
+			document.{HTMLFormName}.{kd_kos_Name}.value=transport.responseText;
+		}
+		});
+}
+//End Include Common JSFunctions
+//m_kostumerButton_Delete_OnClick @5-8B24815B
+function m_kostumerButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End m_kostumerButton_Delete_OnClick
+
+//bind_events @1-118326D7
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("m_kostumerButton_Delete", "click", m_kostumerButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_kostumer -->
+<form id="m_kostumer" name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Tambah / Koreksi Kostumer </strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="m_kostumerkd_kos">Kode Kostumer</label></td> 
+            <td><input id="m_kostumerkd_kos" maxlength="20" size="20" value="{kd_kos}" name="{kd_kos_Name}">&nbsp;<input class="Button" type="button" alt="Pilih  Kode Kostumer" value="Pilih  Kode Kostumer" onClick="pilihnotadulu('k')" name="pilihnota"></td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_kostumernama_kos">Nama Kostumer</label></td> 
+            <td><input id="m_kostumerkostumer" maxlength="200" size="25" value="{nama_kos}" name="{nama_kos_Name}"></td> 
+          </tr> 
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_kostumeralamat">Alamat</label></td> 
+            <td>
+			<textarea id="m_kostumeralamat" rows="4" cols="30" name="{alamat_Name}">{alamat}</textarea></td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_kostumertlp">Telepon</label></td> 
+            <td><input id="m_kostumerkostumer" maxlength="200" size="20" value="{tlp}" name="{tlp_Name}"></td> 
+          </tr> 
+
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_Insert --><input class="Button" id="m_kostumerButton_Insert" type="submit" alt="Add" value="Tambah" name="{Button_Name}"><!-- END Button Button_Insert -->				
+                <!-- BEGIN Button Button_Update --><input class="Button" id="m_kostumerButton_Update" type="submit" alt="Submit" value="Koreksi" name="{Button_Name}"><!-- END Button Button_Update -->
+                <!-- BEGIN Button Button_Delete --><input class="Button" id="m_kostumerButton_Delete" type="submit" alt="Delete" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete --> 
+				<!-- BEGIN Button Button_Cancel --><input class="Button" id="m_kostumerButton_Cancel" type="submit" alt="Cancel" value="Batal" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+</form>
+<!-- END Record m_kostumer -->
+
+</div>
+<div style="clear:both;">
+<br>
+  {footer} 
+</div>
+</body>
+</html>

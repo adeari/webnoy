@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Nota Penjualan Barang</title>
+
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-4D5D7446
+function bind_events() {
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    if (functionExists("header_bind_events")) header_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<!-- BEGIN Record m_trxjual_reportSearch -->
+
+<table cellspacing="0" width="90%" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Nota Penjualan Barang</strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" width="100%" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="4">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+		 <tr class="Controls">
+            <td style="text-align:right" colspan="2"><label for="trxbelitgl">Tanggal Cetak : {tanggalprint}<label for="trxbelitgl"></td>
+          </tr>
+          <tr class="Controls">
+            <td class="th" width="20%"><label for="trxbelitgl">Tanggal</label></td> 
+            <td>{tanggal}</td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="trxbelitgl">Nota</label></td> 
+            <td>{nota}</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="trxbelitgl">Kode Kostumer</label></td> 
+            <td>{kd_kos}</td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="trxbelitgl">Nama Kostumer</label></td> 
+            <td>{nama_kos}</td> 
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label for="trxbelitgl">Alamat</label></td> 
+            <td>{alamat}</td> 
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label for="trxbelitgl">Telepon</label></td> 
+            <td>{tlp}</td> 
+          </tr>
+</table>
+<!-- END Record m_trxjual_reportSearch --><br>
+
+  <!-- BEGIN Grid m_trxjual_report -->
+    <table style="WIDTH: 100%; HEIGHT: 60px" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Daftar&nbsp;Penjualan Barang</strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Grid" cellspacing="0" cellpadding="0">
+<tr class="Caption">
+<th scope="col" style="text-align:center" >Kode Barang</th>
+<th scope="col" style="text-align:center">Nama Barang</th>
+<th scope="col" style="text-align:center">Jumlah</th>
+<th scope="col" style="text-align:center">Harga Jual</th>
+<th scope="col" style="text-align:center">Total Harga Jual</th>
+</tr>
+ 
+            <!-- BEGIN Row -->
+            <tr class="Row">
+              <td>{kd_brg}</td> 
+              <td>{nama_brg}&nbsp;</td> 
+			  <td style="text-align:right">{stok}&nbsp;</td>
+			  <td style="text-align:right">Rp. {hrg_jual}&nbsp;</td> 
+             <td style="text-align:right">Rp. {totaljual}&nbsp;</td> 
+            </tr>
+ <!-- END Row -->
+            <!-- BEGIN NoRecords -->
+            <tr class="NoRecords">
+              <td colspan="8">No records</td> 
+            </tr>
+ <!-- END NoRecords -->
+
+          </table>
+ </td> 
+      </tr>
+ <tr>
+        <td valign="top">
+	<table class="Record" width="100%" cellspacing="0" cellpadding="0">
+<tr class="Controls">
+<td width="70%" valign="bottom" style="text-align:right;font-weight:bold;font-size:12px;vertical-align: bottom;">
+	Total Harga Penjualan
+</td>
+<td  style="text-align:right;font-weight:bold;font-size:12px;vertical-align: bottom;">Rp. {totalitas}
+</td>
+</tr>
+
+</table>
+ 
+		</td>
+		</tr>
+    </table>
+<!-- END Grid m_trxjual_report -->
+<script language="JavaScript">
+	window.print();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="ddaccordionmenu/prototype.js"></script>
+<script type="text/javascript" src="ddaccordionmenu/webtoolkit.md5.js"></script>
+<script language="JavaScript" type="text/javascript">
+var usaha=0;
+
+function doing(){
+if (document.{HTMLFormName}.{login_Name}.value=='')
+{
+	document.{HTMLFormName}.{login_Name}.focus();
+	alert("Isi Login");
+} else if (document.{HTMLFormName}.{password_Name}.value=='')
+{
+	document.{HTMLFormName}.{password_Name}.focus();
+	alert("Isi Password");
+} else {
+	usaha++;
+	var url="dataku.php";
+	new Ajax.Request(url, {   
+		method: 'post', 
+		parameters: { kol : document.{HTMLFormName}.{login_Name}.value, kulik : MD5(document.{HTMLFormName}.{password_Name}.value)}, 
+		onSuccess: function(transport) {
+		if (transport.responseText=='kosong')
+		{
+			if (usaha==3)
+			{
+				var win = top;
+				win.opener = top;
+				win.close ();
+			}else {
+				document.{HTMLFormName}.{login_Name}.value="";
+				document.{HTMLFormName}.{password_Name}.value="";
+				document.{HTMLFormName}.{login_Name}.focus();
+				alert(" Akses di tolak User atau Password salah");
+			      }
+
+		} else document.{HTMLFormName}.submit();
+		}
+		});
+	}
+}
+
+document.onkeydown = checkKeycode;
+function checkKeycode(e) {
+  var keycode;
+  if (window.event) keycode = window.event.keyCode;
+  else if (e) keycode = e.which;
+  if(keycode == 13){
+    doing();
+  }
+}
+
+
+
+//End Include Common JSFunctions
+
+//bind_events @1-9E449BCB
+function bind_events() {
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    if (functionExists("header_bind_events")) header_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{header}</p>
+<!-- BEGIN Record Login -->
+<form id="Login" name="{HTMLFormName}" action="{Action}" method="post">
+  <p>&nbsp;</p>
+ 
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Login</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Loginlogin">Login</label></td> 
+            <td><input id="Loginlogin" maxlength="100" value="{login}" id="{login_Name}" name="{login_Name}" size="20"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Loginpassword">Password</label></td> 
+            <td><input id="Loginpassword" type="password" maxlength="100" id="{password_Name}"  name="{password_Name}" size="20"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoLogin --><input class="Button" id="LoginButton_DoLogin" type="button" alt="Login" onClick="doing();" value="Login" name="{Button_Name}"><!-- END Button Button_DoLogin --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record Login -->
+<br>
+<div align="center">
+  {footer} 
+</div>
+</body>
+</html>

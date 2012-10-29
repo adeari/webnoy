@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>User Page</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+//m_sys_userButton_Delete_OnClick @5-8B24815B
+function m_sys_userButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End m_sys_userButton_Delete_OnClick
+
+//bind_events @1-118326D7
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("m_sys_userButton_Delete", "click", m_sys_userButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_sys_user -->
+<form id="m_sys_user" name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Tambah / Koreksi User </strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+          
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_sys_usernamanya">Login Name</label></td> 
+            <td><input id="m_sys_usernamanya" maxlength="20" size="20" value="{namanya}" name="{namanya_Name}"></td> 
+          </tr> 
+ 
+          <tr class="Controls">
+            <td class="th"><label for="m_sys_userpasswordnya">Password</label></td> 
+			<td><input id="m_sys_userpasswordnya" maxlength="20" size="20" value="isi lagi" name="{passwordnya_Name}"></td> 
+          </tr>
+ 
+ 
+		  <tr class="Controls">
+            <td class="th"><label for="m_sys_useraktivekah">aktivekah</label></td> 
+            <td><input name="{aktivekah_Name}" type="checkbox" value="1" id="m_sys_useraktivekah" {aktivekah}></td>
+          </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_Insert --><input class="Button" id="m_sys_userButton_Insert" type="submit" alt="Tambah" value="Tambah" name="{Button_Name}"><!-- END Button Button_Insert -->				
+                <!-- BEGIN Button Button_Update --><input class="Button" id="m_sys_userButton_Update" type="submit" alt="Submit" value="Koreksi" name="{Button_Name}"><!-- END Button Button_Update -->
+                <!-- BEGIN Button Button_Delete --><input class="Button" id="m_sys_userButton_Delete" type="submit" alt="Hapus" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete --> 
+				<!-- BEGIN Button Button_Cancel --><input class="Button" id="m_sys_userButton_Cancel" type="submit" alt="Batal" value="Batal" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+</form>
+<!-- END Record m_sys_user -->
+
+</div>
+<div style="clear:both;">
+<br>
+  {footer} 
+</div>
+</body>
+</html>

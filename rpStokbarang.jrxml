@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpStokbarang" language="groovy" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="889"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kondisi" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="jml" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT kd_brg,format(stok,0) as stok,format(stok*hrg_beli,0) as asset, kd_hrgbeli,hrg_beli,format(hrg_jual_grosir,0) as hrg_jual_grosir,format(hrg_jual_retail,0) as hrg_jual_retail,satuan,nama_brg  FROM tb_barang $P!{kondisi}]]>
+	</queryString>
+	<field name="kd_brg" class="java.lang.String"/>
+	<field name="stok" class="java.lang.String"/>
+	<field name="asset" class="java.lang.String"/>
+	<field name="kd_hrgbeli" class="java.lang.String"/>
+	<field name="hrg_beli" class="java.lang.Double"/>
+	<field name="hrg_jual_grosir" class="java.lang.String"/>
+	<field name="hrg_jual_retail" class="java.lang.String"/>
+	<field name="satuan" class="java.lang.String"/>
+	<field name="nama_brg" class="java.lang.String"/>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="575" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Laporan Stok Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="23" width="68" height="14"/>
+				<textElement/>
+				<text><![CDATA[Waktu Print :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm">
+				<reportElement x="481" y="23" width="94" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="575" height="15"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="268" y="0" width="84" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Hrg Beli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="0" width="76" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Hrg Jual Grosir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="73" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Hrg Jual Retail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="0" width="108" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="501" y="0" width="74" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total Asset]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="67" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="0" width="93" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Stok]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="575" height="15"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement stretchType="RelativeToTallestObject" x="69" y="0" width="106" height="15"/>
+				<textElement textAlignment="Left">
+					<font isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_brg}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="178" y="0" width="54" height="15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{stok}.replaceAll( ",", "." )]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="234" y="0" width="32" height="15"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{satuan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="448" y="0" width="53" height="15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hrg_jual_retail}.replaceAll( ",", "." )]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="372" y="0" width="54" height="15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hrg_jual_grosir}.replaceAll( ",", "." )]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="272" y="0" width="80" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{kd_hrgbeli}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="522" y="0" width="51" height="15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{asset}.replaceAll( ",", "." )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="505" y="0" width="17" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="430" y="0" width="18" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="354" y="0" width="18" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="2" y="0" width="65" height="15"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{kd_brg}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="174" y="-15" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="66" y="-15" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="352" y="-15" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="429" y="-15" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="503" y="-15" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="268" y="-15" width="1" height="30"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement x="427" y="0" width="29" height="15"/>
+				<textElement/>
+				<text><![CDATA[Hal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="0" width="26" height="15"/>
+				<textElement/>
+				<text><![CDATA[Dari :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="458" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="509" y="0" width="20" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="530" y="0" width="44" height="15"/>
+				<textElement/>
+				<text><![CDATA[Halaman]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" x="430" y="0" width="145" height="15"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="435" y="0" width="73" height="15"/>
+				<textElement/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="522" y="0" width="50" height="15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{jml}.replaceAll( ",", "." )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="505" y="0" width="17" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="503" y="0" width="1" height="15"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

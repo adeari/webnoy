@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Laporan Laba / Rugi</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script src="ddaccordionmenu/control_input.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+var {HTMLFormName}_DatePicker1 = new Object(); 
+{HTMLFormName}_DatePicker1.format           = "dd/mm/yyyy";
+{HTMLFormName}_DatePicker1.style            = "Styles/Style.css";
+{HTMLFormName}_DatePicker1.themeVersion = "3.0";
+var {HTMLFormName}_DatePicker2 = new Object(); 
+{HTMLFormName}_DatePicker2.format           = "dd/mm/yyyy";
+{HTMLFormName}_DatePicker2.style            = "Styles/Style.css";
+{HTMLFormName}_DatePicker2.themeVersion = "3.0";
+//End Date Picker Object Definitions
+
+function ayocetak(str1,str2,str3,str4)
+{
+		var linkhref = "cetaklabarugi.php?s="+str1+"&ii="+str2+"&jojo="+str3+"&joji="+str4;
+		var win=window.open(linkhref, "Cetak Laba / Rugi", "left=100,top=10,width=800,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+		win.focus();
+}
+
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+}
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_trxjualSearch -->
+<form id="m_trxjualSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0" width="80%">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Laporan Laba / Rugi</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="trxjualtgl1">Dari Tanggal</label></td> 
+            <td>
+			<input id="trxjualtanggal1" maxlength="10" size="10"  name="{tanggal1_Name}" value="{tanggal1}"
+			   onfocus="this.select();MaskedTextBox_NS_FocusMask(event, this.id, '99/99/9999');"
+               onkeyup="date_entry_new(this,event);"
+               onkeypress="return date_input(this.id,'{tanggal1_Name}',event);"
+               onchange="date_validation(this);"
+			><!-- BEGIN DatePicker DatePicker1 -->
+			<a href="javascript:showDatePicker('{Name}','{HTMLFormName}','{DateControl}');"><img border="0" src="Styles/gambar/DatePicker.gif" alt="Date Picker"></a>
+			<!-- END DatePicker DatePicker1 --></td> 
+          </tr>
+
+		   <tr class="Controls">
+            <td class="th"><label for="trxjualtgl2">Sampai Tanggal</label></td> 
+            <td>
+			<input id="trxjualtanggal2" maxlength="10" size="10"  name="{tanggal2_Name}" value="{tanggal2}"
+			   onfocus="this.select();MaskedTextBox_NS_FocusMask(event, this.id, '99/99/9999');"
+               onkeyup="date_entry_new(this,event);"
+               onkeypress="return date_input(this.id,'{tanggal2_Name}',event);"
+               onchange="date_validation(this);"
+			><!-- BEGIN DatePicker DatePicker2 -->
+			<a href="javascript:showDatePicker('{Name}','{HTMLFormName}','{DateControl}');"><img border="0" src="Styles/gambar/DatePicker.gif" alt="Date Picker"></a>
+			<!-- END DatePicker DatePicker2 --></td> 
+          </tr>
+		   <tr class="Controls">
+            <td class="th"><label for="trxjualbarang">Pilih Barang</label></td>
+            <td>
+<select name="{barang_Name}" id="trxjualbarang">
+				{barang_Options}
+              </select> / <input id="barangti" name="barangti">
+			</td> 
+			</tr>
+ 
+          <tr  class="Bottom" >
+            <td colspan="2" style="text-align: left;">
+              <input class="Button" id="m_trxjualSearchButton_DoSearch" type="button" alt="Cetak" value="Cetak" name="Cetak" onClick="ayocetak(document.{HTMLFormName}.{tanggal1_Name}.value,document.{HTMLFormName}.{tanggal2_Name}.value,document.{HTMLFormName}.{barang_Name}.value,document.{HTMLFormName}.barangti.value)"></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record m_trxjualSearch --><br>
+
+</div> 
+<div style="clear:both;">
+<br><br><br><br><br><br><br><br><br><br>
+  {footer} 
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctypereport.css" />
+<body>
+<!-- BEGIN Record m_trxjual_reportSearch -->
+<table cellspacing="0" width="100%" cellpadding="0" align="center" border="0">
+      <tr>
+        <td colspan="7" align="center"><strong>Nota Penjualan Barang<br><br></strong></td>
+      </tr>
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="5" align="center">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+		 <tr>
+            <td width="33%">Tanggal Penjualan</td><td width="1%">:</td>
+			<td width="20%">{tanggal}</td>
+			<td width="1%">&nbsp;</td>
+			<td width="24%">Nama Kostumer</td><td width="1%">:</td>
+			<td width="20%">{nama_kos}</td>
+          </tr>
+		  <tr>
+            <td>Tanggal Jatuh Tempo</td><td>:</td>
+			<td>{tgljatuhtempo}</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>Alamat</td><td>:</td>
+			<td>{alamat}</td>
+          </tr>
+		  <tr>
+            <td>No. Faktur</td><td>:</td>
+			<td>{nota}</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>No. Telpon</td><td>:</td>
+			<td>{tlp}</td>
+          </tr>
+<!-- END Record m_trxjual_reportSearch --><br>
+
+  <!-- BEGIN Grid m_trxjual_report -->
+    
+      <tr>
+<td colspan="7">
+		<table class="Grid" cellspacing="0" cellpadding="0"  width="100%" border="0">
+<tr class="Captionrpt">
+<th scope="col" style="text-align: center" width="20%">Nama Barang</th>
+<th scope="col" style="text-align: center" width="20%">Jumlah</th>
+<th scope="col" style="text-align: center" width="20%">Harga</th>
+<th scope="col" style="text-align: center" width="20%">Total</th>
+</tr>
+ 
+            <!-- BEGIN Row -->
+            <tr class="Rowrpt">
+              <td>{nama_brg}&nbsp;</td> 
+			  <td style="text-align: right">{stok}&nbsp;</td>
+			  <td style="text-align: right">Rp. {hrg_jual}&nbsp;</td> 
+             <td style="text-align: right">Rp. {totaljual}&nbsp;</td> 
+            </tr>
+ <!-- END Row -->
+            <!-- BEGIN NoRecords -->
+            <tr>
+              <td colspan="4">No records</td> 
+            </tr>
+ <!-- END NoRecords -->
+<tr  class="Rowrpt">
+     <td colspan="3" style="text-align:right;font-weight:bold;">Total</td>
+	<td  style="text-align:right;font-weight:bold;">Rp. {totalitas}</td>
+</tr>
+          </table>
+		</td> 
+      </tr>
+ <tr>
+ <td colspan="7"><font color="red">Barang yang sudah dibeli tidak bisa dikembalikan lagi !</font></td> 
+ </tr>
+</table>
+
+<!-- END Grid m_trxjual_report -->
+<script language="JavaScript">
+	window.print();
+</script>
+
+</body>
+</html>

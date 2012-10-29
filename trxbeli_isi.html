@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Data Pembelian</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script src="ddaccordionmenu/prototype.js" type="text/javascript"></script>
+<script src="ddaccordionmenu/control_input.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+var diawali="";
+
+function isikandata()
+{
+	var bisa=true;
+	var FormState = document.{HTMLFormName}.FormState.value.split(";");
+	var akhir=parseInt(FormState[1]);
+	var hrg_jual_grosir=0;
+	var hrg_beli=0;
+	var objeknya;
+	for(var i=0;i<akhir;i++)
+	{
+		objeknya =  document.getElementById('row'+i);
+		if (objeknya.style.display != "none")
+		{		
+			objeknya = document.getElementById('hrg_jual_grosir'+i);
+			hrg_jual_grosir=parseInt(ilangti(objeknya.value));
+			objeknya = document.getElementById('hrg_jual_retail'+i);
+			hrg_jual_retail=parseInt(ilangti(objeknya.value));
+			objeknya = document.getElementById('hrg_beli'+i);
+			hrg_beli=parseInt(ilangti(objeknya.value));
+			if (hrg_beli>hrg_jual_grosir)
+			{
+				bisa=false;
+				document.getElementById('hrg_jual_grosir'+i).focus();
+				alert("Harga jual grosir kurang dari harga beli");
+				i=akhir;
+			}
+			if (hrg_beli>hrg_jual_retail&&bisa)
+			{
+				bisa=false;
+				document.getElementById('hrg_jual_retail'+i).focus();
+				alert("Harga jual retail kurang dari harga beli");
+				i=akhir;
+			}
+			
+		}
+	}
+	if (bisa)
+	{
+		document.{HTMLFormName}.submit();
+	}
+}
+
+function pilihnotadulu(str) {
+ var url="ambilnotabeli.php";
+ new Ajax.Request(url, {   
+		method: 'post', 
+		parameters: { kol : str},
+		onSuccess: function(transport) {
+			document.{HTMLFormName}.{nota_Name}.value=transport.responseText;
+		}
+		});
+}
+
+function OpenPop_UpList(ini)
+{
+var FieldValue="";
+	var linkhref = document.getElementById("pilih_menu").href;
+  var win=window.open(linkhref+"?nomor="+ini, "Pilih Menu", "left=100,top=10,width=800,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+  win.focus();
+}
+function OpenPop_UpSuplier(ini)
+{
+var FieldValue="";
+	var linkhref = "{pilih_sup_Src}";
+  var win=window.open(linkhref, "Pilih Suplier", "left=100,top=10,width=800,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+  win.focus();
+}
+
+function ceknota(str){
+if (str.length>0)
+{
+	var url="ceknotajual.php";
+	new Ajax.Request(url, {   
+		method: 'post', 
+		parameters: { kol : str,diawali:diawali},
+		onSuccess: function(transport) {
+		if (transport.responseText!="kosong")
+		{
+			document.{HTMLFormName}.{nota_Name}.value=diawali;
+			document.{HTMLFormName}.{nota_Name}.focus();
+			alert("Nota Pembelian bernomor "+transport.responseText+" sudah ada");
+		}
+		}
+		});
+		}
+}
+
+function OpenCetak(ini)
+{
+  var win=window.open("trxbeli_report.php?nota="+ini, "Pembelian Barang", "left=100,top=10,width=800,height=600,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+  win.focus();
+}
+
+var needCheck = true;
+function deldetail(nomor)
+{	
+	var uouououou = document.getElementById('delnya'+nomor);
+	var ada=false;
+	var i=nomor;
+	 var FormState = document.{HTMLFormName}.FormState.value.split(";");
+	 var akhir=parseInt(FormState[1]);
+	while (!ada&&i<akhir)
+	{
+		i++;
+		var uouououou2 = document.getElementById('row'+i);
+		if (uouououou2.style.display != "none")
+		{
+			ada=true;
+		}
+	}
+	
+	if (uouououou.checked&&ada) {
+	if (confirm("dihapus baris ini ?")){
+		var uouououou1 = document.getElementById('row'+nomor);
+		uouououou1.style.display = 'none';
+		}
+		else 
+		{
+			uouououou.checked=false;
+		}
+	}
+	itungtotalnya();
+}
+
+function tambah(nomor,isi)
+{
+	var uouououou = document.getElementById('delnya'+nomor);
+	if (uouououou.style.display == "none") {
+			uouououou.style.display='';
+			uouououou.LastAttribute = "True";
+			}
+	nomor=nomor+1;
+	if (nomor>0&&isi.length>0) {
+		var uouououou = document.getElementById('row'+nomor);
+		if (uouououou.style.display == "none") {
+			uouououou.style.display = '';
+			uouououou.LastAttribute = "True";
+			var uouououou = document.getElementById('delnya'+nomor);
+			uouououou.checked=false;
+			try
+			{
+				uouououou.style.display=none;
+			}			catch ($errnya)			{			}
+			
+		   }
+	}
+}
+
+function ilangti(str){
+var balik=""
+for (var i=0;i<str.length;i++ )  	if (str[i]!='.') 	balik=balik+str[i];
+	return balik;
+}
+function itungdetailtotal(nomor)
+{
+	var objeknya = document.getElementById('hrg_beli'+nomor);	
+	var stringsementara=objeknya.value;
+	var hrg_beli=parseFloat(ilangti(stringsementara));
+
+	objeknya = document.getElementById('qty'+nomor);	
+	stringsementara=objeknya.value;
+	var qty=parseFloat(ilangti(stringsementara));
+	
+
+	var totaldetail=parseInt(hrg_beli*qty);
+
+	objeknya = document.getElementById('totalbeli'+nomor);
+	objeknya.value=totaldetail;
+	formatCurrency(objeknya.value,objeknya);
+	itungtotalnya();
+}
+
+function itungtotalnya(){
+	var FormState = document.{HTMLFormName}.FormState.value.split(";");
+	 var akhir=parseInt(FormState[1]);
+	 var subtotal=0;
+	 var objeknya;
+	for(var i=0;i<akhir;i++)
+	{
+		objeknya =  document.getElementById('row'+i);
+		if (objeknya.style.display != "none")
+		{		
+			objeknya = document.getElementById('totalbeli'+i);
+			subtotal=subtotal+parseInt(ilangti(objeknya.value));	
+		}
+	}
+	objeknya = document.getElementById('totalitas');
+	objeknya.value=subtotal;
+	formatCurrency(objeknya.value,objeknya);
+}
+
+function formatCurrency(num,num1) {
+num = num.toString().replace(/\$|\./g,'');
+if(isNaN(num))
+num = "0";
+sign = (num == (num = Math.abs(num)));
+num = Math.floor(num*100+0.50000000001);
+num = Math.floor(num/100).toString();
+for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+num = num.substring(0,num.length-(4*i+3))+'.'+
+num.substring(num.length-(4*i+3));
+num1.value= (((sign)?'':'-') +  num );
+}
+
+
+
+
+
+var trxbeli_DatePicker1 = new Object(); 
+trxbeli_DatePicker1.format           = "dd/mm/yyyy";
+trxbeli_DatePicker1.style            = "Styles/Style.css";
+trxbeli_DatePicker1.themeVersion = "3.0";
+//End Include Common JSFunctions
+//m_trxbeliButton_Delete_OnClick @5-8B24815B
+function trxbeliButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End trxbeliButton_Delete_OnClick
+
+//bind_events @1-118326D7
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("trxbeliButton_Delete", "click", trxbeliButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record trxbeli -->
+<form id="trxbeli" name="{HTMLFormName}" action="{Action}" method="post">
+<input type="hidden" value="{FormState}" name="FormState">
+  <div align="center">
+    <table cellspacing="0" width="90%" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Tambah / Koreksi Pembelian Barang</strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" width="100%" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="4">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="trxbelitgl">Tanggal</label></td> 
+            <td>
+			<input id="trxbelitanggal" maxlength="10" size="10"  name="{tanggal_Name}"
+			   onfocus="this.select();MaskedTextBox_NS_FocusMask(event, this.id, '99/99/9999');"
+               onkeyup="date_entry_new(this,event);"
+               onkeypress="return date_input(this.id,'{tanggal_Name}',event);"
+               onchange="date_validation(this);"
+			>
+			<!-- BEGIN DatePicker DatePicker1 -->
+			<a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');"><img border="0" src="Styles/gambar/DatePicker.gif" alt="Date Picker"></a>
+			<!-- END DatePicker DatePicker1 -->
+			</td> 			
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label for="trxbelinota">No. Nota</label></td> 
+            <td><input id="trxbelinota" maxlength="250" size="20" value="{nota}" onBlur="ceknota(this.value)" onKeyUp="ceknota(this.value)" name="{nota_Name}">&nbsp;<input class="Button" type="button" alt="Pilih No. Nota" value="Pilih No. Nota" onClick="pilihnotadulu(document.{HTMLFormName}.{tanggal_Name}.value)" name="pilihnota"></td> 
+          </tr>
+		  <tr class="Controls">
+		  <input type="hidden" value="{kd_sup}" name="{kd_sup_Name}">
+            <td class="th"><label>Nama Suplier</label></td> 
+            <td id="nama_sup">{nama_sup}&nbsp;&nbsp;&nbsp;<a id="pilih_sup" onclick="OpenPop_UpSuplier();return false;">Pilih Suplier</a></td> 
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label>Alamat_suplier Suplier</label></td> 
+            <td id="alamat">{alamat}</td> 
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label>Telepon</label></td> 
+            <td id="tlp">{tlp}</td> 
+          </tr>
+		  
+ 
+            <tr class="Bottom">
+              <td style="text-align: left;background-color: #f0f0f0; color: #000000;" colspan="4">
+                <!-- BEGIN Button Button_Insert --><input class="Button" id="trxbeliButton_Insert" type="button" alt="Tambah" value="Tambah" name="{Button_Name}" onclick="isikandata();"><!-- END Button Button_Insert -->		
+                <!-- BEGIN Button Button_Update --><input class="Button" id="trxbeliButton_Update" type="button" alt="Koreksi" value="Koreksi" name="{Button_Name}" onclick="isikandata();"><!-- END Button Button_Update -->
+                <!-- BEGIN Button Button_Delete --><input class="Button" id="trxbeliButton_Delete" type="submit" alt="Hapus" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete --> 
+				<!-- BEGIN Button Button_Print --><input class="Button" id="trxbeliButton_Print"  type="button" alt="Cetak" onClick="OpenCetak('{nota}');return false;" value="Cetak" name="{Button_Name}"><!-- END Button Button_Print -->
+				<!-- BEGIN Button Button_Cancel --><input class="Button" id="trxbeliButton_Cancel" type="submit" alt="Batal" value="Batal" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+            </tr>
+			<tr class="Controls">
+			<td colspan="4">&nbsp;</td>
+			</tr>
+			<tr>
+			<td colspan="4">
+<table class="Record" width="100%" cellspacing="0" cellpadding="0">
+<tr class="Caption">
+<th scope="col">Kode Barang</th>
+<th scope="col">Nama Barang</th>
+<th scope="col">Jumlah</th>
+<th scope="col">Harga Beli</th>
+<th scope="col">Harga Jual Grosir</th>
+<th scope="col">Harga Jual Retail</th>
+<th scope="col">Total Harga Beli</th>
+<th scope="col">Delete</th>
+</tr>
+
+<!-- BEGIN detailnya -->
+<tr class="Controls" id="row{nomor}" {model}>
+<td class="col" style="width:18%"><input  value="{isi_kd_brg}" maxlength="100" size="5" id="kd_brg{nomor}" name="kd_brg{nomor}" onChange="tambah({nomor},this.value);"> <a href="{pilih_menu_Src}" id="pilih_menu" onclick="OpenPop_UpList({nomor});return false;">Pilih Barang</a></td>
+
+<td class="col" style="width:12%"><input  value="{nama_brg}" maxlength="250" size="15" id="nama_brg{nomor}" name="nama_brg{nomor}" onChange="tambah({nomor},this.value);"></td>
+
+<td class="col" style="width:6%"><input style="width:70%;text-align:right" onKeyUp="formatCurrency(this.value,this);itungdetailtotal('{nomor}');" size="7" maxlength="30" value="{isi_qty}" id="qty{nomor}" name="qty{nomor}"></td>
+
+<td class="col" style="width:12%">Rp. <input style="width:70%;text-align:right" onKeyUp="formatCurrency(this.value,this);itungdetailtotal('{nomor}');" size="7" maxlength="15" value="{isi_hrg_beli}" id="hrg_beli{nomor}" name="hrg_beli{nomor}"></td>
+
+<td class="col" style="width:10%">Rp. <input style="width:70%;text-align:right" onKeyUp="formatCurrency(this.value,this);itungdetailtotal('{nomor}');" size="7" maxlength="15" value="{isi_hrg_jual_grosir}" id="hrg_jual_grosir{nomor}" name="hrg_jual_grosir{nomor}"></td>
+
+<td class="col" style="width:10%">Rp. <input style="width:70%;text-align:right" onKeyUp="formatCurrency(this.value,this);itungdetailtotal('{nomor}');" size="7" maxlength="15" value="{isi_hrg_jual_retail}" id="hrg_jual_retail{nomor}" name="hrg_jual_retail{nomor}"></td>
+
+
+<td class="col" style="width:10%">Rp. <input style="width:70%;text-align:right" onKeyUp="formatCurrency(this.value,this);itungdetailtotal('{nomor}');" size="7" maxlength="15" value="{isi_totalbeli}" id="totalbeli{nomor}" name="totalbeli{nomor}"></td>
+<td class="col" style="width:5%"><input name="delnya{nomor}" {model} onClick="deldetail({nomor})" type="checkbox" value="1" id="delnya{nomor}"></td>
+</tr> 
+ <!-- END detailnya -->
+
+
+<tr class="Controls" id="row2" style="display:none;">
+<td class="th" colspan="8"><input   value="" id="detail2" name="detail2" onchange="ShowNewEmptyRow(this);"> - <input   value=""  name="ah2"></td>
+</tr> 
+</table>
+</tr>
+<tr class="Controls">			<td colspan="4">&nbsp;</td>			</tr>
+			<tr>
+			<td colspan="4">
+<table class="Record" width="100%" cellspacing="0" cellpadding="0">
+<tr class="Controls">
+<td width="82%" valign="bottom" style="text-align:right;font-weight:bold;font-size:12px;vertical-align: bottom;">
+	TOTAL  Pembelian
+</td>
+<td >Rp. <input style="width:70%;text-align:right;font-weight:bold;font-size:12px;" id="totalitas" name="totalitas" value="{totalitas}">
+</td>
+</tr>
+</table>
+			</td>
+			</tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+  <script language="JavaScript" type="text/javascript">
+  tanggalnya="{tanggal}";
+  if ( tanggalnya.length==0)
+  {
+  
+  var date = new Date();
+  tanggalnya=""+date.getDate();
+  if (tanggalnya.length==1)
+	tanggalnya="0"+tanggalnya;
+	tanggalnya+="/";
+	nilai=date.getMonth()+1;
+   tambahtgl=""+nilai;
+   if (tambahtgl.length==1)
+   tambahtgl="0"+tambahtgl;
+   tanggalnya+=tambahtgl;
+	tanggalnya+="/"+date.getFullYear();  
+}
+document.{HTMLFormName}.{tanggal_Name}.value=tanggalnya;
+diawali="{nota}";
+  </script>
+</form>
+<!-- END Record trxbeli -->
+
+</div>
+<div style="clear:both;">
+<br>
+  {footer} 
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Laporan Stok Barang</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script src="ddaccordionmenu/control_input.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+
+function ayocetak(str3,str4)
+{
+		var linkhref = "cetakbarangstok.php?jojo="+str3+"&joji="+str4;
+		var win=window.open(linkhref, "Cetak Stok Barang", "left=50,top=10,width=900,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+		win.focus();
+}
+
+function ayocetakisitabel(isinbya){
+	var LinkedLB = document.getElementById("tabelbarange");
+	if (LinkedLB.length>0)
+	{
+		var linkhref = "cetakbarangstokj.php?jekojeko="+LinkedLB.length;
+		for (var i=0; i < LinkedLB.length; i++) {
+			linkhref+="&beho"+i+"="+LinkedLB.options[i].value;
+		}
+		var win=window.open(linkhref, "Cetak Stok Barang", "left=50,top=10,width=900,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+		win.focus();
+	} 
+	else 
+	{ alert("Data di Tabel kosong"); }
+	
+}
+
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+}
+
+function ayoisi()
+{
+ var AvailableLB = document.getElementById("trxjualbarang");
+ var LinkedLB = document.getElementById("tabelbarange");
+ for (var i=0; i < AvailableLB.length; i++) {
+   if (AvailableLB.options[i].selected == true) {
+       LinkedLB.options[LinkedLB.length] = 
+       new Option(AvailableLB.options[i].text, AvailableLB.options[i].value);
+       AvailableLB.options[i] = null;
+       i=i-1;
+   }
+}
+}
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_trxjualSearch -->
+<form id="m_trxjualSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0" width="80%">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Laporan Stok Barang</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          
+		   <tr class="Controls">
+            <td class="th"><label for="trxjualbarang">Pilih Barang</label></td>
+            <td>
+<select name="{barang_Name}" id="trxjualbarang">
+				{barang_Options}
+              </select> / <input id="barangti" name="barangti">
+			</td> 
+			</tr>
+ 
+          <tr  class="Bottom" >
+            <td colspan="2" style="text-align: left;">
+              <input class="Button" id="m_trxjualSearchButton_DoSearch" type="button" alt="Cetak" value="Cetak" name="Cetak" onClick="ayocetak(document.{HTMLFormName}.{barang_Name}.value,document.{HTMLFormName}.barangti.value)">
+			  &nbsp;
+			  <input class="Button" id="masuktabel" type="button" alt="Masukkan ketabel di bawah" value="Mengisi tabel bawah" name="Cetak" onClick="ayoisi()">
+			  </td> 
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label for="trxjualbarang">Pilih Barang</label></td>
+            <td>
+<select name="tabelbarange" size="4" id="tabelbarange">
+
+              </select>
+			</td> 
+			</tr>
+
+<tr  class="Bottom" >
+            <td colspan="2" style="text-align: left;">
+<input class="Button" id="ayocetaktabeln" type="button" alt="Cetak" value="Cetak Isi Tabel di Atas" name="Cetaktabel" onClick="ayocetakisitabel(document.{HTMLFormName}.tabelbarange.value)">
+          </tr>
+
+
+
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record m_trxjualSearch --><br>
+
+ </div>
+<div style="clear:both;">
+<br><br><br><br><br><br><br><br><br><br>
+  {footer} 
+</div>
+</body>
+</html>

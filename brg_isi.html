@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Data Barang</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+function ilangti(str){
+var balik=""
+for (var i=0;i<str.length;i++ )  	if (str[i]!='.') 	balik=balik+str[i];
+	return balik;
+}
+
+function isikandata()
+{
+	var bisa=true;
+	var objeknya;
+	objeknya = document.getElementById('m_brghrg_jual_grosir');
+	var hrg_jual=parseInt(ilangti(objeknya.value));
+	objeknya = document.getElementById('m_brghrg_beli');
+	var hrg_beli=parseInt(ilangti(objeknya.value));
+	if (hrg_beli>hrg_jual)
+	{
+		bisa=false;
+		document.getElementById('m_brghrg_jual_grosir').focus();
+		alert("Harga jual grosir kurang dari harga beli");
+	}
+	objeknya = document.getElementById('m_brghrg_jual_retail');
+	hrg_jual=parseInt(ilangti(objeknya.value));
+	if (hrg_beli>hrg_jual&&bisa)
+	{
+		bisa=false;
+		document.getElementById('m_brghrg_jual_retail').focus();
+		alert("Harga jual retail kurang dari harga beli");
+	}
+	if (bisa)
+	{
+		document.{HTMLFormName}.submit();
+	}
+}
+
+function formatCurrency(num,num1) {
+num = num.toString().replace(/\$|\./g,'');
+if(isNaN(num))
+num = "0";
+sign = (num == (num = Math.abs(num)));
+num = Math.floor(num*100+0.50000000001);
+num = Math.floor(num/100).toString();
+for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+num = num.substring(0,num.length-(4*i+3))+'.'+
+num.substring(num.length-(4*i+3));
+num1.value= (((sign)?'':'-') +  num );
+}
+function m_brgButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End m_brgButton_Delete_OnClick
+
+//bind_events @1-118326D7
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("m_brgButton_Delete", "click", m_brgButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_brg -->
+<form id="m_brg" name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Tambah / Koreksi Barang </strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="m_brgkd_brg">Kode Barang</label></td> 
+            <td><input id="m_brgkd_brg" maxlength="100" size="20" value="{kd_brg}" name="{kd_brg_Name}"></td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_brgnama_brg">Nama Barang</label></td> 
+            <td><input id="m_brgnama_brg" maxlength="250" size="100" value="{nama_brg}" name="{nama_brg_Name}"></td> 
+          </tr> 
+		  <tr class="Controls">
+            <td class="th"><label for="m_brgsatuan">Satuan</label></td> 
+            <td><input id="m_brgsatuan" maxlength="50" size="20" value="{satuan}" name="{satuan_Name}"></td> 
+          </tr> 
+ 
+          <tr class="Controls">
+            <td class="th"><label for="m_brghrg_beli">Harga Beli</label></td> 
+<td><input id="m_brghrg_beli"  size="20" value="{hrg_beli}" name="{hrg_beli_Name}" style="text-align:right" onKeyUp="formatCurrency(this.value,this)"></td>			
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label for="m_brghrg_jual_grosir">Harga Jual Grosir</label></td> 
+            <td><input id="m_brghrg_jual_grosir"  size="20" value="{hrg_jual_grosir}" name="{hrg_jual_grosir_Name}" style="text-align:right" onKeyUp="formatCurrency(this.value,this)"></td>
+          </tr>
+		  <tr class="Controls">
+            <td class="th"><label for="m_brghrg_jual_retail">Harga Jual Retail</label></td> 
+			<td><input id="m_brghrg_jual_retail"  size="20" value="{hrg_jual_retail}" name="{hrg_jual_retail_Name}" style="text-align:right" onKeyUp="formatCurrency(this.value,this)"></td>
+          </tr>
+		  
+		  <tr class="Controls">
+            <td class="th"><label for="m_brgstok">Stok</label></td> 
+            <td><input id="m_brgstok"  size="20" value="{stok}" name="{stok_Name}" style="text-align:right" onKeyUp="formatCurrency(this.value,this)"></td>
+          </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_Insert --><input class="Button" id="m_brgButton_Insert" type="button" alt="Add" value="Tambah" name="{Button_Name}" onclick="isikandata();"><!-- END Button Button_Insert -->				
+                <!-- BEGIN Button Button_Update --><input class="Button" id="m_brgButton_Update" type="submit" alt="Submit" value="Koreksi" name="{Button_Name}"><!-- END Button Button_Update -->
+                <!-- BEGIN Button Button_Delete --><input class="Button" id="m_brgButton_Delete" type="submit" alt="Delete" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete --> 
+				<!-- BEGIN Button Button_Cancel --><input class="Button" id="m_brgButton_Cancel" type="submit" alt="Cancel" value="Batal" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+</form>
+<!-- END Record m_brg -->
+
+</div>
+<div style="clear:both;">
+<br>
+  {footer} 
+</div>
+</body>
+<script language="JavaScript" type="text/javascript">
+if (document.{HTMLFormName}.{hrg_beli_Name}.value!='')
+	formatCurrency(document.{HTMLFormName}.{hrg_beli_Name}.value,document.{HTMLFormName}.{hrg_beli_Name});
+if (document.{HTMLFormName}.{hrg_jual_grosir_Name}.value!='')	formatCurrency(document.{HTMLFormName}.{hrg_jual_grosir_Name}.value,document.{HTMLFormName}.{hrg_jual_grosir_Name});
+if (document.{HTMLFormName}.{hrg_jual_retail_Name}.value!='')
+	formatCurrency(document.{HTMLFormName}.{hrg_jual_retail_Name}.value,document.{HTMLFormName}.{hrg_jual_retail_Name});
+if (document.{HTMLFormName}.{stok_Name}.value!='')
+	formatCurrency(document.{HTMLFormName}.{stok_Name}.value,document.{HTMLFormName}.{stok_Name});
+</script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Pilih nama_brg</title>
+<script language="JavaScript" type="text/javascript">
+function SetOpenerValue(kd_brg,nama_brg,stok,hrg_beli,hrg_jual_grosir,hrg_jual_retail)
+{
+	 	window.opener.document.trxbeli.kd_brg{nomor}.value = kd_brg;
+		window.opener.document.trxbeli.nama_brg{nomor}.value = nama_brg;
+		window.opener.document.trxbeli.hrg_beli{nomor}.value = hrg_beli;
+		window.opener.document.trxbeli.hrg_jual_grosir{nomor}.value = hrg_jual_grosir;
+		window.opener.document.trxbeli.hrg_jual_retail{nomor}.value = hrg_jual_retail;
+		window.opener.tambah({nomor},window.opener.document.trxbeli.kd_brg{nomor}.value);
+	window.opener.focus();
+	window.close();
+}
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/gambar/Style_doctype.css">
+</head>
+<body>
+<table border="0">
+  <tr>
+    <td><a href="{Link1_Src}" onclick="window.close();">Tutup</a></td> 
+  </tr>
+</table>
+<!-- BEGIN Record pilih_nama_brgSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0" width="90%">
+    <tr>
+      <td valign="top">
+	  <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/gambar/Spacer.gif" border="0" alt=""></td> 
+          <td class="th" style="text-align:center">
+            <strong>Cari Barang</strong>
+ </td> 
+          <td class="HeaderRight"><img src="Styles/gambar/Spacer.gif" border="0" alt=""></td> 
+        </tr>
+ 
+      </table>
+        <table class="Record" cellspacing="0" cellpadding="0">
+		
+        </tr>
+          <tr class="Controls">
+            <td class="th"><label for="pilih_nama_brgSearchs_katanya">Kata yang di cari</label></td> 
+            <td><input name="{s_katanya_Name}" size="40" value="{s_katanya}" id="pilih_nama_brgSearchs_katanya"><input type="hidden" name="nomor" value="{nomor}" id="nomor"></td> 
+          </tr>
+ 
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button DoSearch --><input type="image" src="Styles/gambar/en/ButtonSearch.gif" value="Cari" name="{Button_Name}" alt="Cari" style="border-width: 0; "><!-- END Button DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record pilih_nama_brgSearch --><br>
+<!-- BEGIN Grid employees -->
+<table cellspacing="0" cellpadding="0" border="0" width="90%">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/gambar/Spacer.gif" border="0" alt=""></td> 
+          <td class="th" style="text-align:center">
+            <strong>Daftar Barang</strong>
+ </td> 
+          <td class="HeaderRight"><img src="Styles/gambar/Spacer.gif" border="0" alt=""></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th style="text-align:center">Kode Barang</th>
+          <th style="text-align:center">Nama Barang</th>
+		  <th style="text-align:center">Stok</th>
+		  <th style="text-align:center">Harga Beli</th>
+		  <th style="text-align:center">Harga Jual Grosir</th>
+		  <th style="text-align:center">Harga Jual Retail</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{kd_brg_Src}" onclick="SetOpenerValue('{kd_brg}','{nama_brg}','{stok}','{hrg_beli}','{hrg_jual_grosir}','{hrg_jual_retail}');return false;" width="18%">{kd_brg}</a>&nbsp;</td> 
+          <td width="27%">{nama_brg}&nbsp;</td> 
+		  <td style="text-align:right" width="15%">{stok}&nbsp;</td> 
+		  <td style="text-align:right" width="14%">{kd_hrgbeli}&nbsp;</td> 
+		  <td style="text-align:right" width="8%">{hrg_jual_grosir}&nbsp;</td> 
+		  <td style="text-align:right" width="8%">{hrg_jual_retail}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No records&nbsp;</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator1 -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/gambar/First.gif" alt="First" /></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img border="0" src="Styles/gambar/FirstOff.gif" alt="FirstOff" /><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/gambar/Prev.gif" alt="Prev" /></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img border="0" src="Styles/gambar/PrevOff.gif" alt="PrevOff" /><!-- END Prev_Off -->&nbsp;{Page_Number}&nbsp;of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/gambar/Next.gif" alt="Next" /></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img border="0" src="Styles/gambar/NextOff.gif" alt="NextOff" /><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/gambar/Last.gif" alt="Last" /></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img border="0" src="Styles/gambar/LastOff.gif" alt="LastOff" /><!-- END Last_Off --><!-- END Navigator Navigator1 -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid employees -->
+</body>
+</html>

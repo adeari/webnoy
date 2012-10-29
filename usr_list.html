@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>User Page</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//End Date Picker Object Definitions
+
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+}
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_sys_userSearch -->
+<form id="m_sys_userSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Pencarian User </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->          
+ 
+          <tr class="Controls">
+            <td class="th"><label for="m_sys_userSearchs_namanya">Login Name</label></td> 
+            <td><input id="m_sys_userSearchs_namanya" maxlength="20" size="20" value="{s_namanya}" name="{s_namanya_Name}"></td> 
+          </tr> 
+ 
+          <tr class="Controls">
+            <td class="th"><label for="m_sys_userSearchs_passwordnya">Passsword</label></td> 
+            <td><input id="m_sys_userSearchs_passwordnya" maxlength="20" size="20" value="{s_passwordnya}" name="{s_passwordnya_Name}"></td> 
+          </tr> 
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_sys_userSearchs_active">Active</label></td> 
+            <td><input name="{s_active_Name}" type="checkbox" value="1" id="m_sys_userSearchs_active" {s_active}></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="m_sys_userSearchButton_DoSearch" type="Tambah" alt="Cari" value="Cari" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record m_sys_userSearch --><br>
+
+  <!-- BEGIN Grid m_sys_user -->
+  <div align="center">
+    <table style="WIDTH: 95%; HEIGHT: 163px" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Daftar&nbsp;User</strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Grid" cellspacing="0" cellpadding="0">
+            <tr class="Caption">         
+ 
+              <th scope="col">
+              <!-- BEGIN Sorter Sorter_namanya --><a href="{Sort_URL}" id="m_sys_userSorter_namanya">Login Name</a> 
+              <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Compact/Images/Asc.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Compact/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_namanya --></th>
+ 
+              <th scope="col">
+              <!-- BEGIN Sorter Sorter_passwordnya --><a href="{Sort_URL}" id="m_sys_userSorter_passwordnya">Password</a> 
+              <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Compact/Images/Asc.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Compact/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_passwordnya --></th>
+ 
+            </tr>
+ 
+            <!-- BEGIN Row -->
+            <tr class="Row">
+              <td><a href="{namanya_Src}" id="m_sys_usernamanya_{m_sys_user:rowNumber}">{namanya}</a>&nbsp;</td> 
+              <td>{passwordnya}&nbsp;</td> 
+            </tr>
+ <!-- END Row -->
+            <!-- BEGIN NoRecords -->
+            <tr class="NoRecords">
+              <td colspan="4">No records</td> 
+            </tr>
+ <!-- END NoRecords -->
+            <tr class="Footer">
+              <td colspan="4"><a href="{m_sys_user_Insert_Src}" id="m_sys_userm_sys_user_Insert">Tambah Data Baru</a>&nbsp; 
+                <!-- BEGIN Navigator Navigator -->
+                <!-- BEGIN First_On --><a href="{First_URL}">|&lt;</a> <!-- END First_On -->
+                <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt;</a> <!-- END Prev_On -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt;</a> <!-- END Next_On -->
+                <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;|</a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp;</td> 
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+ <!-- END Grid m_sys_user -->
+</div>
+<div style="clear:both;">
+<br>
+  {footer} 
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+[03-Jun-2003 01:08:09] PHP Notice:  Undefined property: stdClass::$Errors in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 163
+[03-Jun-2003 01:08:09] PHP Fatal error:  Call to a member function Count() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 163
+[03-Jun-2003 01:08:59] PHP Notice:  Undefined property: clsRecordm_trxbeli::$active in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 504
+[03-Jun-2003 01:08:59] PHP Fatal error:  Call to a member function Show() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 504
+[03-Jun-2003 01:21:45] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 331
+[03-Jun-2003 01:28:42] PHP Notice:  Undefined property: clsGridemployees::$tlp in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:28:42] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:29:48] PHP Notice:  Undefined property: clsGridemployees::$tlp in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:29:48] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:29:51] PHP Notice:  Undefined property: clsGridemployees::$tlp in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:29:51] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:31:18] PHP Notice:  Undefined property: clsGridemployees::$tlp in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:31:18] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:31:23] PHP Notice:  Undefined property: clsGridemployees::$tlp in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[03-Jun-2003 01:31:23] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_sup.php on line 333
+[01-Jan-2003 04:33:17] PHP Notice:  Undefined property: clsRecordm_trxbeli::$isi_disc in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 526
+[01-Jan-2003 04:33:17] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 526
+[01-Jan-2003 04:34:14] PHP Notice:  Undefined property: clsRecordm_trxbeli::$isi_total in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 530
+[01-Jan-2003 04:34:14] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 530
+[01-Jan-2003 04:53:31] PHP Fatal error:  Call to undefined method clsGridemployees::GetErrors() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 355
+[01-Jan-2003 04:54:02] PHP Notice:  Undefined property: clsGridemployees::$nama_brg in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 383
+[01-Jan-2003 04:54:02] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 383
+[01-Jan-2003 04:54:02] PHP Fatal error:  Call to a member function ToString() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 383
+[01-Jan-2003 04:56:18] PHP Fatal error:  Call to a member function SetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 493
+[01-Jan-2003 04:57:12] PHP Notice:  Undefined property: clsemployeesDataSource::$hrg_jualnya_grosir in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 494
+[01-Jan-2003 04:57:12] PHP Fatal error:  Call to a member function SetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 494
+[01-Jan-2003 04:57:50] PHP Notice:  Undefined property: clsGridemployees::$stok in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 333
+[01-Jan-2003 04:57:50] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 333
+[01-Jan-2003 04:59:14] PHP Notice:  Undefined property: clsGridemployees::$hrg_beli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 332
+[01-Jan-2003 04:59:14] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 332
+[01-Jan-2003 05:10:09] PHP Notice:  Undefined property: clsGridemployees::$kd_hrgbeli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 333
+[01-Jan-2003 05:10:09] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_barang.php on line 333
+[01-Jan-2003 05:54:00] PHP Notice:  Undefined property: clsRecordm_trxbeli::$kd_add in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 140
+[01-Jan-2003 05:54:00] PHP Fatal error:  Call to a member function Validate() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 140
+[01-Jan-2003 06:39:56] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 267
+[01-Jan-2003 06:40:55] PHP Parse error:  parse error, expecting `T_FUNCTION' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 272
+[01-Jan-2003 06:41:09] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 545
+[01-Jan-2003 06:41:57] PHP Notice:  Undefined index:  urlnota in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 532
+[01-Jan-2003 06:41:57] PHP Fatal error:  Call to a member function GetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 568
+[01-Jan-2003 06:42:20] PHP Fatal error:  Call to a member function GetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 568
+[01-Jan-2003 06:42:53] PHP Fatal error:  Call to a member function close() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 463
+[01-Jan-2003 13:16:17] PHP Notice:  Undefined property: clsRecordm_trxbeli::$nama_brg in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 400
+[01-Jan-2003 13:16:17] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 400
+[01-Jan-2003 13:17:22] PHP Notice:  Undefined property: datadetail::$nama_brg in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 669
+[01-Jan-2003 13:17:22] PHP Fatal error:  Call to a member function SetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 669
+[01-Jan-2003 13:18:04] PHP Notice:  Undefined property: clsRecordm_trxbeli::$nama_brg in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 400
+[01-Jan-2003 13:18:04] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 400
+[01-Jan-2003 13:54:07] PHP Notice:  Undefined property: clsRecordm_trxbeli::$telp in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 440
+[01-Jan-2003 13:54:07] PHP Fatal error:  Call to a member function Show() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 440
+[01-Jan-2003 18:15:31] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 319
+[01-Jan-2003 18:17:59] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 320
+[01-Jan-2003 18:47:17] PHP Notice:  Undefined property: clsm_trxbeliDataSource::$tgl in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 692
+[01-Jan-2003 18:47:17] PHP Fatal error:  Call to a member function GetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 692
+[01-Jan-2003 19:50:49] PHP Notice:  Undefined property: clsRecordm_trxbeli_reportSearch::$subtotalnya in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 126
+[01-Jan-2003 19:50:49] PHP Fatal error:  Call to a member function Show() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 126
+[01-Jan-2003 19:51:26] PHP Notice:  Undefined property: clsRecordm_trxbeli_reportSearch::$subtotalnya in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 126
+[01-Jan-2003 19:51:26] PHP Fatal error:  Call to a member function Show() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 126
+[01-Jan-2003 20:14:55] PHP Notice:  Undefined property: clsRecordm_trxbeli_reportSearch::$alm_tg in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 107
+[01-Jan-2003 20:14:55] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 107
+[01-Jan-2003 20:16:03] PHP Notice:  Undefined property: clsRecordm_trxbeli_reportSearch::$alm_tg in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 107
+[01-Jan-2003 20:16:03] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 107
+[01-Jan-2003 20:43:49] PHP Notice:  Undefined property: clsGridm_trxbeli_report::$hrg_beli_grosir in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 213
+[01-Jan-2003 20:43:49] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 213
+[01-Jan-2003 20:43:49] PHP Notice:  Undefined property: clsGridm_trxbeli_report::$hrg_beli_retail in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 214
+[01-Jan-2003 20:43:49] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 214
+[01-Jan-2003 20:43:49] PHP Notice:  Undefined property: clsm_trxbeli_reportDataSource::$hrg_beli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 374
+[01-Jan-2003 20:43:49] PHP Fatal error:  Call to a member function SetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 374
+[01-Jan-2003 20:45:25] PHP Notice:  Undefined property: clsGridm_trxbeli_report::$hrg_beli_retail in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 215
+[01-Jan-2003 20:45:25] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 215
+[01-Jan-2003 20:45:25] PHP Notice:  Undefined property: clsm_trxbeli_reportDataSource::$hrg_beli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 375
+[01-Jan-2003 20:45:25] PHP Fatal error:  Call to a member function SetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 375
+[01-Jan-2003 20:46:42] PHP Notice:  Undefined property: clsm_trxbeli_reportDataSource::$hrg_beli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 377
+[01-Jan-2003 20:46:42] PHP Fatal error:  Call to a member function SetDBValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 377
+[02-Jan-2003 04:09:12] PHP Notice:  Undefined property: clsGridm_trxbeli_report::$totalitas in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 218
+[02-Jan-2003 04:09:12] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 218
+[02-Jan-2003 07:35:52] PHP Notice:  Undefined property: datadetail::$totalbelix in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 493
+[02-Jan-2003 07:35:52] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 493
+[02-Jan-2003 07:45:51] PHP Fatal error:  Call to undefined function money_format() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 500
+[02-Jan-2003 07:46:10] PHP Fatal error:  Call to undefined function money_format() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 500
+[02-Jan-2003 07:46:40] PHP Fatal error:  Call to undefined function money_format() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 501
+[02-Jan-2003 07:47:16] PHP Fatal error:  Call to undefined function money_format() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 501
+[02-Jan-2003 07:55:30] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_report.php on line 122
+[02-Jan-2003 08:13:20] PHP Warning:  include_once(./trxjual_list_events.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_list.php on line 528
+[02-Jan-2003 08:13:20] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening './trxjual_list_events.php' for inclusion (include_path='.;C:\php5\pear') in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_list.php on line 528
+[02-Jan-2003 08:13:20] PHP Fatal error:  Call to undefined function BindEvents() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_list.php on line 557
+[02-Jan-2003 08:26:08] PHP Warning:  include_once(./pilih_supj_events.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_supj.php on line 501
+[02-Jan-2003 08:26:08] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening './pilih_supj_events.php' for inclusion (include_path='.;C:\php5\pear') in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_supj.php on line 501
+[02-Jan-2003 08:26:08] PHP Fatal error:  Call to undefined function BindEvents() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\pilih_supj.php on line 524
+[02-Jan-2003 09:11:04] PHP Notice:  Undefined property: clsRecordm_trxjual::$isi_hrg_jual_retail in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 541
+[02-Jan-2003 09:11:04] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 541
+[02-Jan-2003 10:00:58] PHP Notice:  Undefined property: clsRecordm_trxjual::$isi_hrg_jual_retail in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 541
+[02-Jan-2003 10:00:58] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 541
+[02-Jan-2003 10:04:32] PHP Notice:  Undefined property: ceknotajualDataSource::$KD_USR in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\ceknotajual.php on line 64
+[02-Jan-2003 10:04:32] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\ceknotajual.php on line 64
+[02-Jan-2003 10:07:45] PHP Notice:  Undefined property: ceknotajualDataSource::$KD_USR in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\ceknotajual.php on line 64
+[02-Jan-2003 10:07:45] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\ceknotajual.php on line 64
+[02-Jan-2003 10:44:09] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 314
+[02-Jan-2003 12:15:57] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 313
+[02-Jan-2003 12:16:19] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 313
+[02-Jan-2003 17:30:26] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 353
+[02-Jan-2003 17:35:42] PHP Notice:  Undefined property: clsRecordm_trxbeli::$Parameters in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 353
+[02-Jan-2003 17:42:12] PHP Notice:  Undefined property: databarang::$kd_hrgbeli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 313
+[02-Jan-2003 17:42:12] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 313
+[02-Jan-2003 18:14:25] PHP Notice:  Undefined property: clsRecordm_trxjual::$isi_hrg_jual_grosir in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 489
+[02-Jan-2003 18:14:25] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 489
+[02-Jan-2003 18:15:05] PHP Notice:  Undefined property: datadetail::$totaljualx in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 493
+[02-Jan-2003 18:15:05] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 493
+[02-Jan-2003 18:41:06] PHP Notice:  Undefined property: datadetail::$kd_hrgbeli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 487
+[02-Jan-2003 18:41:06] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 487
+[02-Jan-2003 18:42:47] PHP Notice:  Undefined property: datadetail::$hrg_jualx in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 491
+[02-Jan-2003 18:42:47] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_isi.php on line 491
+[02-Jan-2003 18:49:14] PHP Notice:  Undefined property: clsm_trxjual_reportDataSource::$hrg_jual_retail in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 233
+[02-Jan-2003 18:49:14] PHP Fatal error:  Call to a member function GetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 233
+[02-Jan-2003 18:49:50] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 233
+[02-Jan-2003 18:49:50] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 233
+[02-Jan-2003 18:50:44] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:50:44] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:50:45] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:50:45] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:25] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:25] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:26] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:26] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:27] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:27] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:27] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:27] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 232
+[02-Jan-2003 18:51:52] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 216
+[02-Jan-2003 18:51:52] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 216
+[02-Jan-2003 18:51:52] PHP Notice:  Undefined property: clsGridm_trxjual_report::$totaljual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 218
+[02-Jan-2003 18:51:52] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 218
+[02-Jan-2003 18:51:52] PHP Notice:  Undefined property: clsGridm_trxjual_report::$hrg_jual in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 231
+[02-Jan-2003 18:51:52] PHP Fatal error:  Call to a member function SetValue() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxjual_report.php on line 231
+[03-Jan-2003 00:58:44] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 538
+[03-Jan-2003 00:58:44] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 542
+[03-Jan-2003 00:58:44] PHP Notice:  Undefined index:  Name in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 544
+[03-Jan-2003 01:00:28] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 538
+[03-Jan-2003 01:00:28] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 542
+[03-Jan-2003 01:00:28] PHP Notice:  Undefined index:  Name in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 544
+[03-Jan-2003 01:01:49] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 538
+[03-Jan-2003 01:01:49] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 542
+[03-Jan-2003 01:01:49] PHP Notice:  Undefined index:  Name in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 544
+[03-Jan-2003 01:02:33] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 538
+[03-Jan-2003 01:02:33] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 542
+[03-Jan-2003 01:02:33] PHP Notice:  Undefined index:  Name in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 544
+[03-Jan-2003 01:03:15] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 538
+[03-Jan-2003 01:03:15] PHP Notice:  Undefined index:  DataType in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 542
+[03-Jan-2003 01:03:15] PHP Notice:  Undefined index:  Name in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\Common.php on line 544
+[03-Jan-2003 02:01:45] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\usr_isi.php on line 433
+[03-Jan-2003 03:13:36] PHP Parse error:  parse error, expecting `','' or `';'' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\trxbeli_isi.php on line 475
+[03-Jan-2003 03:28:02] PHP Warning:  include_once(./report_labarugi_events.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 528
+[03-Jan-2003 03:28:02] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening './report_labarugi_events.php' for inclusion (include_path='.;C:\php5\pear') in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 528
+[03-Jan-2003 03:28:02] PHP Fatal error:  Call to undefined function BindEvents() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 557
+[03-Jan-2003 03:28:35] PHP Fatal error:  Call to undefined function BindEvents() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 553
+[03-Jan-2003 04:07:37] PHP Fatal error:  Call to undefined method clsGridm_trxjual::Initialize() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 404
+[03-Jan-2003 04:07:52] PHP Fatal error:  Call to undefined method clsGridm_trxjual::Show() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 453
+[03-Jan-2003 04:10:09] PHP Fatal error:  Call to undefined method clsRecordm_trxjualSearch::Operation() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\report_labarugi.php on line 265
+[03-Jan-2003 04:17:40] PHP Warning:  include_once(./cetaklabarugi_events.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 501
+[03-Jan-2003 04:17:40] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening './cetaklabarugi_events.php' for inclusion (include_path='.;C:\php5\pear') in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 501
+[03-Jan-2003 04:17:40] PHP Fatal error:  Call to undefined function BindEvents() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 524
+[03-Jan-2003 14:39:16] PHP Notice:  Undefined property: clsRecordm_cetaklabarugiSearch::$nota in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 115
+[03-Jan-2003 14:39:16] PHP Fatal error:  Call to a member function Show() on a non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 115
+[03-Jan-2003 14:44:36] PHP Parse error:  parse error in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 337
+[03-Jan-2003 14:45:13] PHP Notice:  Undefined variable: Method in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 337
+[03-Jan-2003 14:45:13] PHP Notice:  Undefined variable: Method in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 337
+[03-Jan-2003 15:02:15] PHP Notice:  Undefined property: clsGridm_cetaklabarugi::$hrg_jual_grosir in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 191
+[03-Jan-2003 15:02:15] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 191
+[03-Jan-2003 15:02:15] PHP Notice:  Undefined property: clsGridm_cetaklabarugi::$hrg_jual_retail in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 192
+[03-Jan-2003 15:02:15] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 192
+[03-Jan-2003 15:02:15] PHP Notice:  Undefined property: clsGridm_cetaklabarugi::$totalbeli in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 194
+[03-Jan-2003 15:02:15] PHP Notice:  Trying to get property of non-object in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\webnoy\cetaklabarugi.php on line 194

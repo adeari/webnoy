@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Data Suplier</title>
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script><script type="text/javascript" src="ddaccordionmenu/prototype.js"></script>
+<script language="JavaScript" type="text/javascript">
+function pilihnotadulu(str) {
+ var url="ambilkodesuplier.php";
+ new Ajax.Request(url, {   
+		method: 'post', 
+		onSuccess: function(transport) {
+			document.{HTMLFormName}.{kd_sup_Name}.value=transport.responseText;
+		}
+		});
+}
+//End Include Common JSFunctions
+//m_suplierButton_Delete_OnClick @5-8B24815B
+function m_suplierButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End m_suplierButton_Delete_OnClick
+
+//bind_events @1-118326D7
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("m_suplierButton_Delete", "click", m_suplierButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{header}</p>
+<br>
+<div  style="float:left;width:20%">
+{left} 
+</div>
+<div  style="float:left;width:80%">
+<!-- BEGIN Record m_suplier -->
+<form id="m_suplier" name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+              <td class="th"><strong>Tambah / Koreksi Suplier </strong></td> 
+              <td class="HeaderRight"><img alt="" src="Styles/Compact/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="m_suplierkd_sup">Kode Suplier</label></td> 
+            <td><input id="m_suplierkd_sup" maxlength="20" size="20" value="{kd_sup}" name="{kd_sup_Name}">&nbsp;<input class="Button" type="button" alt="Pilih  Kode Suplier" value="Pilih  Kode Suplier" onClick="pilihnotadulu('k')" name="pilihnota"></td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_supliernama_sup">Nama Suplier</label></td> 
+            <td><input id="m_supliersuplier" maxlength="200" size="25" value="{nama_sup}" name="{nama_sup_Name}"></td> 
+          </tr> 
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_suplieralamat">Alamat</label></td> 
+            <td>
+			<textarea id="m_suplieralamat" rows="4" cols="30" name="{alamat_Name}">{alamat}</textarea></td> 
+          </tr>
+
+		  <tr class="Controls">
+            <td class="th"><label for="m_supliertlp">Telepon</label></td> 
+            <td><input id="m_supliersuplier" maxlength="200" size="20" value="{tlp}" name="{tlp_Name}"></td> 
+          </tr> 
+
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_Insert --><input class="Button" id="m_suplierButton_Insert" type="submit" alt="Add" value="Tambah" name="{Button_Name}"><!-- END Button Button_Insert -->				
+                <!-- BEGIN Button Button_Update --><input class="Button" id="m_suplierButton_Update" type="submit" alt="Submit" value="Koreksi" name="{Button_Name}"><!-- END Button Button_Update -->
+                <!-- BEGIN Button Button_Delete --><input class="Button" id="m_suplierButton_Delete" type="submit" alt="Delete" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete --> 
+				<!-- BEGIN Button Button_Cancel --><input class="Button" id="m_suplierButton_Cancel" type="submit" alt="Cancel" value="Batal" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+</form>
+<!-- END Record m_suplier -->
+
+</div>
+<div style="clear:both;">
+<br>
+  {footer} 
+</div>
+</body>
+</html>
